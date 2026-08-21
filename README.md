@@ -72,3 +72,28 @@ graph TD
     N -.->|Graph Context| G2
     G2 --> CA
     CA -->|Final Answer| U
+⚙️ Reproducible Testing Instructions
+To run the Dark Data Alchemist multi-agent pipeline locally, follow these steps:
+
+1. Clone the Repository
+git clone [https://github.com/Rubenskiada/Dark-Data-Alchemist-Autonomous-GraphRAG.git](https://github.com/Rubenskiada/Dark-Data-Alchemist-Autonomous-GraphRAG.git)
+cd Dark-Data-Alchemist-Autonomous-GraphRAG
+
+2. Install Dependencies
+Ensure you have Python 3.9+ installed.
+pip install google-genai neo4j streamlit
+
+3. Environment Setup
+Create a .env file in the root directory and add your credentials:
+GEMINI_API_KEY="your_api_key_here"
+NEO4J_URI="bolt://localhost:7687"
+NEO4J_USER="neo4j"
+NEO4J_PASSWORD="your_password"
+
+4. Run the Pipeline
+
+Step 1: Start the Watchdog extraction agent to ingest logs into Neo4j:
+python watchdog.py
+
+Step 2: Launch the interactive GraphRAG interface:
+streamlit run chat.py
