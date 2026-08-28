@@ -1,0 +1,1 @@
+Project Alchemist is an automated Knowledge Graph pipeline. It uses Google Gemini to extract entities and relationships from unstructured text and stores them in Neo4j. The project was delayed on October 12th due to a server crash.
